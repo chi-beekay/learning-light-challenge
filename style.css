@@ -1,0 +1,880 @@
+/*========== GOOGLE FONTS ===========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/*========== VARIABLE CSS ===========*/
+
+:root {
+    /*========== COLORS  ==========*/
+    --color-primary: #7B64A4;
+    --color-card: #EFF0FF;
+    --color-background: #FFFFFF;
+    --color-blue: #535ADF;
+    --color-gold: #F2994A;
+    --color-grey: #2E3059;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+}
+
+/*========== BASE CSS ===========*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: var(--body-font);
+    font-size: 13px;
+    /* font-size: var(--font-size); */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-back);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+svg {
+    width: 24px;
+    aspect-ratio: 1/1;
+}
+
+
+/*========== REUSABLE STYLING ===========*/
+.profile-photo {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+/*================ STYLING (MOBILE FIRST DESIGN) ================*/
+
+/*========== SIDENAV ===========*/
+.side-nav__container .logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--color-card);
+    padding: .5rem 2rem;
+}
+
+.side-nav__container .logo-div .logo {
+    display: flex;
+    font-size: 1rem;
+    gap: .3rem;
+    color: var(--color-grey);
+    justify-items: center;
+    /* gap: 1px; */
+}
+
+.side-nav__container .logo-div .icon {
+    color: var(--color-grey);
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    position: absolute;
+    width: 100%;
+    background-color: var(--color-background);
+    left: -100%;
+}
+
+.side-nav__container .logo-div .logo svg{
+    color: var(--color-gold);
+    width: 25px;
+}
+
+.side-nav__container .links {
+    border-bottom: 2px solid var(--color-card);
+    padding: 3rem 2rem;
+}
+
+.side-nav__container .links ul{
+    display: grid;
+    gap: 1rem;
+}
+
+.side-nav__container .links ul li.active{
+    color: var(--color-blue);
+}
+
+.side-nav__container .links ul li:hover{
+    color: var(--color-blue);
+}
+
+.side-nav__container .links ul li.active{
+    color: var(--color-blue);
+}
+
+.side-nav__container .links ul li a{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    gap: 1rem;
+}
+
+.progress-bar {
+    padding: 3rem 2rem;
+}
+
+.progress-bar a {
+    color: var(--color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-bar a span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-bar .bars {
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+.progress-bar .bars .bar-containers {
+    margin-bottom: 1rem;
+}
+
+.progress-bar .bars .bar-containers .progress {
+    position: relative;
+    margin: .5rem 0;
+}
+
+.progress-bar .bars .bar-containers .progress .full{
+    background-color: var(--color-card);
+    height: 5px;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.progress-bar .bars .bar-containers .progress .main{
+    background-color: var(--color-blue);
+    height: 5px;
+    width: 80%;
+    border-radius: 2rem;
+    position: absolute;
+}
+
+.progress-bar .bars .bar-containers .progress-2 .main{
+    background-color: var(--color-blue);
+    height: 5px;
+    width: 60%;
+    border-radius: 2rem;
+    position: absolute;
+}
+
+.progress-bar .bars .bar-containers .progress-3 .main{
+    background-color: var(--color-blue);
+    height: 5px;
+    width: 40%;
+    border-radius: 2rem;
+    position: absolute;
+}
+
+.progress-bar .bars .bar-containers .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*========== MAINNAV ===========*/
+
+
+.main-nav__container .nav {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--color-card);
+    justify-content: space-between;
+    padding: .49rem 1rem;
+}
+
+.main-nav__container .nav .search, 
+.main-nav__container .nav .profile, 
+.main-nav__container .nav .profile .profile-photo__con {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav__container .nav .search input{
+    display: none;
+}
+
+.main-nav__container .nav .profile  {
+    gap: 1rem;
+    color: var(--color-grey);
+}
+
+.main-nav__container .nav .profile .profile-photo__con p {
+    display: none;
+}
+
+.main-nav__container .nav .profile .profile-photo__con .profile-photo {
+    width: 1.5rem;
+}
+
+.main-nav__container .main-content{
+    padding: 3rem 1rem;
+}
+
+.main-nav__container .main-content .buttons ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main-nav__container .main-content .buttons ul li{
+    background-color: var(--color-card);
+    color: var(--color-grey);
+    padding: .3rem .7rem;
+    border-radius: .5rem;
+}
+
+.main-nav__container .main-content .buttons ul li:hover{
+    background-color: var(--color-blue);
+    color: var(--color-background);
+}
+
+.main-content__details {
+    margin-top: 3rem;
+}
+
+.main-content__details .articles .header .header-text,
+.main-content__details .themes .header .header-text{
+    font-size: 15px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+
+.main-content__details .articles .header .header-text span,
+.main-content__details .themes .header .header-text span{
+    color: var(--color-blue);
+}
+
+.card-container .card-1{
+    background-color: var(--color-card);
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    /* height: 0vh; */
+}
+
+.card-container .c-2 {
+    margin-top: 1rem;
+}
+
+.card-container .card-1 .card-container{
+    display: flex;
+}
+
+.card-container .card-1 .card-container .img-container{
+    position: relative;
+}
+
+.card-container .card-1 .details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* justify-content: center; */
+}
+
+.card-container .card-1 .details .header{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-container .card .details .time{
+    display: flex;
+    background-color: #E1E4FE;
+    align-items: flex-start;
+    gap: .2rem;
+    width: fit-content;
+    color: var(--color-grey);
+    padding: .3rem;
+    border-radius: 10px;
+}
+
+.card-container .card-1 .details svg{
+   width: 17px;
+}
+
+.card-container .c-2 .details .time-image{
+   display: flex;
+   justify-content: space-between;
+   align-items: start;
+}
+
+.card-container .c-2 .details .header{
+    width: 90%;
+}
+
+.card-container .c-2 .details .time-image .time{
+   height: fit-content;
+}
+
+.card-container .c-2 .details .time-image .img-container{
+   width: 40%;
+}
+
+.card-container .card-1 .img-container{
+   width: 70%;
+}
+
+
+.card-container .card .card-profile{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card-container .card .card-profile .profile-image{
+    width: 3rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: .8rem;
+}
+
+.themes .header .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.themes .header .grid .grid-cont{
+    width: 7.5rem;
+    aspect-ratio: 1/1;
+    background-color: var(--color-card);
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    border-radius: 1rem;
+}
+
+.themes .header .grid .grid-cont .con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.themes .header .grid .grid-cont .con img{
+    width: 50%;
+}
+
+/*========== video-lesson ===========*/
+.video-lesson,
+.theme-teachers,
+.themes {
+    margin-top: 3rem;
+}
+
+.video-lesson .card-container .grid-1 {
+    width: 100%;
+    height: 52.5vh;
+    background-color: #535ADF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-background);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.video-lesson .card-container .grid-1 .text-head{
+    font-size: 25px;
+    width: 60%;
+    font-weight: 300;
+
+}
+
+.video-lesson .card-container .grid-1 .card-profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-lesson .card-container .grid-1 .card-profile .card-profile__con,
+.video-lesson .card-container .grid-2 .card-profile{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.video-lesson .card-container .grid-1 .card-profile .card-profile__con .profile-text p:nth-child(1),
+.video-lesson .card-container .grid-2 .card-profile .profile-text p:nth-child(1){ 
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.video-lesson .card-container .grid-1 .card-profile .card-profile__con .profile-text p:nth-child(2),
+.video-lesson .card-container .grid-2 .card-profile .profile-text p:nth-child(2){ 
+    font-size: 13px;
+    font-weight: 300;
+    color: #7D83F9;
+}
+
+.video-lesson .card-container .grid-1 .card-profile .text{ 
+    background-color: var(--color-grey);
+    padding: 2px 6px;
+    border-radius: 7px;
+}
+
+.video-lesson .card-container .second-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.video-lesson .card-container .second-grid .grid-2 {
+    width: 70%;
+    height: 25vh;
+    background-color: #535ADF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-background);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.video-lesson .card-container .grid-2 .text-head{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+
+}
+
+.theme-teachers .theme-teachers__con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: .7rem;
+    font-weight: 500;
+}
+
+
+.theme-teachers .theme-teachers__con svg,
+.theme-teachers .grid .grid-con .rate{
+    color: var(--color-blue);
+    font-weight: 500;
+}
+
+.theme-teachers .grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.theme-teachers .grid .grid-con,
+.theme-teachers .grid .grid-con .grid-con__photo{
+    display: flex;
+    align-items: center;
+}
+
+.theme-teachers .grid .grid-con{
+    justify-content: space-between;
+}
+
+.theme-teachers .grid .grid-con .grid-con__photo{
+    gap: .5rem;
+}
+
+.theme-teachers .grid .grid-con .grid-con__photo .profile-photo{
+    width: 4rem;
+}
+
+.theme-teachers .grid .grid-con .grid-con__photo .text p:nth-child(1){
+    color: var(--color-grey);
+    font-weight: 500;
+}
+
+
+
+/* .video-lesson .card-container .grid-2 .card-profile {
+    display: flex;
+    justify-content: space-between;
+} */
+
+
+/*==================== MEDIA QUERIES ====================*/
+/*==================== MEDIUM DEVICES ====================*/
+@media screen and (min-width: 780px){
+    .desktop {
+        display: block;
+    }
+
+    .mobile,
+    .main-nav__container .nav .icon {
+        display: none;
+    }
+
+    .desktop {
+        border-right: 2px solid var(--color-card);
+        height: 100%;
+    }
+
+    .container-content {
+        display: flex;
+        /* justify-content: space-between; */
+    }
+
+    .side-nav__container .logo-div,
+    .side-nav__container .links,
+    .progress-bar {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav__container .nav,
+    .main-nav__container .main-content{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .main-nav__container .nav .search input,
+    .main-nav__container .nav .profile .profile-photo__con p{
+        display: block;
+    }
+
+    .main-nav__container .nav .search {
+        background: var(--color-card);
+        width: 60%;
+        padding: .3rem 1rem;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .main-nav__container .nav .search input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+    .main-nav__container .nav .search input::placeholder{
+        color: var(--color-primary);
+    }
+
+    .main-nav__container .nav .search svg{
+        width: 17px;
+        color: var(--color-grey);
+    }
+
+    .main-nav__container .nav .profile .profile-photo__con{
+        gap: .5rem;
+    }
+
+    .main-nav__container .nav .profile .profile-photo__con p{
+        font-weight: 500;
+    }
+
+    .main-content__details {
+        /* display: flex; */
+        gap: 2rem;
+    }
+
+    .card-container .c-1 {
+        width: 100%;
+    }
+
+    .card-container .c-2 {
+        width: 30vw;
+        margin-top: 1rem;
+    }
+
+    .card-container .card-1 .details .header{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .themes {
+        margin-top: 3rem;
+    }
+
+    .themes .header .grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .video-lesson .card-container .second-grid {
+        width: 30vw;
+        margin-top: 1rem;
+    }
+
+    .video-lesson .card-container .second-grid .grid-2{
+        width: 100%;
+    }
+
+    .theme-teachers .grid .grid-con .grid-con__photo .profile-photo{
+        width: 3rem;
+    }
+
+
+}
+/*==================== MEDIA QUERIES ====================*/
+/*==================== MEDIUM DEVICES ====================*/
+@media screen and (min-width: 900px){
+    .desktop {
+        display: block;
+    }
+
+    .mobile,
+    .main-nav__container .nav .icon {
+        display: none;
+    }
+
+    .desktop {
+        border-right: 2px solid var(--color-card);
+        height: 100%;
+    }
+
+    .container-content {
+        display: flex;
+        /* justify-content: space-between; */
+    }
+
+    .side-nav__container .logo-div,
+    .side-nav__container .links,
+    .progress-bar {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav__container .nav,
+    .main-nav__container .main-content{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .main-nav__container .nav .search input,
+    .main-nav__container .nav .profile .profile-photo__con p{
+        display: block;
+    }
+
+    .main-nav__container .nav .search {
+        background: var(--color-card);
+        width: 60%;
+        padding: .3rem 1rem;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .main-nav__container .nav .search input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+    .main-nav__container .nav .search input::placeholder{
+        color: var(--color-primary);
+    }
+
+    .main-nav__container .nav .search svg{
+        width: 17px;
+        color: var(--color-grey);
+    }
+
+    .main-content__details {
+        display: flex;
+        gap: 2rem;
+    }
+
+
+    .card-container {
+        /* display: flex; */
+        /* gap: 1rem; */
+    }
+
+    .card-container .c-1 {
+        width: 100%;
+    }
+
+    .card-container .c-2 {
+        width: 30vw;
+    }
+
+    .card-container .card-1 .details .header{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .themes {
+        margin-top: 0;
+    }
+
+    .themes .header .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0;
+        gap: 12px;
+    }
+
+    .video-lesson .card-container .second-grid {
+        width: 30vw;
+        margin-top: 1rem;
+    }
+
+    .video-lesson .card-container .second-grid .grid-2{
+        width: 100%;
+    }
+
+    .theme-teachers .grid .grid-con .grid-con__photo .profile-photo{
+        width: 3rem;
+    }
+
+
+}
+/*==================== MEDIA QUERIES ====================*/
+/*==================== LARGER DEVICES ====================*/
+@media screen and (min-width: 1200px){
+    .desktop {
+        display: block;
+    }
+
+    .mobile,
+    .main-nav__container .nav .icon {
+        display: none;
+    }
+
+    .desktop {
+        border-right: 2px solid var(--color-card);
+        height: 100%;
+    }
+
+    .container-content {
+        display: flex;
+        /* justify-content: space-between; */
+    }
+
+    .side-nav__container .logo-div,
+    .side-nav__container .links,
+    .progress-bar {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav__container .nav,
+    .main-nav__container .main-content{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .main-nav__container .nav .search input,
+    .main-nav__container .nav .profile .profile-photo__con p{
+        display: block;
+    }
+
+    .main-nav__container .nav .search {
+        background: var(--color-card);
+        width: 60%;
+        padding: .3rem 1rem;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .main-nav__container .nav .search input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+    .main-nav__container .nav .search input::placeholder{
+        color: var(--color-primary);
+    }
+
+    .main-nav__container .nav .search svg{
+        width: 17px;
+        color: var(--color-grey);
+    }
+
+    .main-content__details {
+        display: flex;
+        gap: 3rem;
+    }
+
+
+    .card-container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .card-container .c-1 {
+        width: 100%;
+    }
+
+    .card-container .c-2 {
+        width: 30vw;
+        margin-top: 0;
+    }
+
+    .card-container .card-1 .details .header{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .themes {
+        margin-top: 0;
+    }
+
+    .themes .header .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0;
+        gap: 12px;
+    }
+
+    .video-lesson .card-container .second-grid {
+        width: 30vw;
+        margin-top: 0;
+    }
+
+    .video-lesson .card-container .second-grid .grid-2{
+        width: 100%;
+    }
+
+    .theme-teachers .grid .grid-con .grid-con__photo .profile-photo{
+        width: 4rem;
+    }
+}
