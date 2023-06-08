@@ -29,7 +29,6 @@ body {
     color: var(--color-primary);
     font-family: var(--body-font);
     font-size: 13px;
-    /* font-size: var(--font-size); */
 }
 
 a {
@@ -74,11 +73,10 @@ svg {
 
 .side-nav__container .logo-div .logo {
     display: flex;
-    font-size: 1rem;
+    font-size: 1.3rem;
     gap: .3rem;
     color: var(--color-grey);
     justify-items: center;
-    /* gap: 1px; */
 }
 
 .side-nav__container .logo-div .icon {
@@ -90,16 +88,41 @@ svg {
 }
 
 .mobile {
-    position: absolute;
+    position: fixed;
     width: 100%;
     background-color: var(--color-background);
     left: -100%;
+    transition: all ease-in-out 1s;
+    z-index: 100;
+    height: 100%;
+    overflow-y: auto;
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+.mobile::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar width for Chrome, Safari, and Opera */
+  display: none; /* Hide scrollbar for IE and Edge */
+}
+
+#close,
+#open {
+    cursor: pointer;
+}
+
+.show-nav {
+    left: 0%;
+}
+
+/*========== SIDENAV-Logo ===========*/
 
 .side-nav__container .logo-div .logo svg{
     color: var(--color-gold);
     width: 25px;
 }
+
+/*========== SIDENAV-Links ===========*/
 
 .side-nav__container .links {
     border-bottom: 2px solid var(--color-card);
@@ -129,6 +152,8 @@ svg {
     font-weight: 400;
     gap: 1rem;
 }
+
+/*========== SIDENAV-Progress-bar ===========*/
 
 .progress-bar {
     padding: 3rem 2rem;
@@ -198,15 +223,15 @@ svg {
     justify-content: space-between;
 }
 
-/*========== MAINNAV ===========*/
 
+/*========== MAINNAV ===========*/
 
 .main-nav__container .nav {
     display: flex;
     align-items: center;
     border-bottom: 2px solid var(--color-card);
     justify-content: space-between;
-    padding: .49rem 1rem;
+    padding: .69rem 1rem;
 }
 
 .main-nav__container .nav .search, 
@@ -241,7 +266,7 @@ svg {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: .7rem;
 }
 
 .main-nav__container .main-content .buttons ul li{
@@ -272,13 +297,14 @@ svg {
     color: var(--color-blue);
 }
 
+/*========== MAINNAV-Card-container ===========*/
+
 .card-container .card-1{
     background-color: var(--color-card);
     border-radius: 1rem;
     padding: 1rem;
     position: relative;
     width: 100%;
-    /* height: 0vh; */
 }
 
 .card-container .c-2 {
@@ -298,7 +324,6 @@ svg {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* justify-content: center; */
 }
 
 .card-container .card-1 .details .header{
@@ -357,6 +382,8 @@ svg {
     border-radius: .8rem;
 }
 
+/*========== MAINNAV-Themes ===========*/
+
 .themes .header .grid {
     display: flex;
     flex-wrap: wrap;
@@ -384,7 +411,7 @@ svg {
     width: 50%;
 }
 
-/*========== video-lesson ===========*/
+/*========== MAINNAV-Video-lesson ===========*/
 .video-lesson,
 .theme-teachers,
 .themes {
@@ -394,7 +421,8 @@ svg {
 .video-lesson .card-container .grid-1 {
     width: 100%;
     height: 52.5vh;
-    background-color: #535ADF;
+    background: rgb(90,97,234);
+    background: linear-gradient(90deg, rgba(90,97,234,1) 0%, rgba(90,97,234,1) 72%, rgba(79,87,221,1) 83%, rgba(65,73,209,1) 91%, rgba(55,63,185,1) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -476,7 +504,7 @@ svg {
     font-weight: 500;
 }
 
-
+/*========== MAINNAV-Themes-Teacher ===========*/
 .theme-teachers .theme-teachers__con svg,
 .theme-teachers .grid .grid-con .rate{
     color: var(--color-blue);
@@ -522,9 +550,6 @@ svg {
 /*==================== MEDIA QUERIES ====================*/
 /*==================== MEDIUM DEVICES ====================*/
 @media screen and (min-width: 780px){
-    .desktop {
-        display: block;
-    }
 
     .mobile,
     .main-nav__container .nav .icon {
@@ -642,7 +667,7 @@ svg {
 
 }
 /*==================== MEDIA QUERIES ====================*/
-/*==================== MEDIUM DEVICES ====================*/
+/*==================== LARGE DEVICES ====================*/
 @media screen and (min-width: 900px){
     .desktop {
         display: block;
@@ -713,12 +738,6 @@ svg {
     .main-content__details {
         display: flex;
         gap: 2rem;
-    }
-
-
-    .card-container {
-        /* display: flex; */
-        /* gap: 1rem; */
     }
 
     .card-container .c-1 {
